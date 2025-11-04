@@ -1099,21 +1099,31 @@
     }
 
     /* ======= Player de vídeo (modal com seta Voltar) ======= */
-    function abrirVideo(src){
-      if(!src) return;
-      const wrap = document.createElement('div');
-      wrap.className = 'video-player';
-      wrap.innerHTML = `
-        <div class="video-container">
-          <button class="video-close" onclick="fecharVideo()">← Voltar</button>
-          <video controls autoplay>
-            <source src="${src}" type="video/mp4">
-            Seu navegador não suporta vídeo HTML5.
-          </video>
-        </div>
-      `;
-      document.body.appendChild(wrap);
-    }
+
+function abrirVideo(src){
+  if (!src) return;
+
+  // Se for link do Google Drive, converte para link de download direto
+  let finalSrc = src;
+  const driveMatch = src.match(/https?:\/\/drive\.google\.com\/file\/d\/([^/]+)/);
+  if (driveMatch) {
+    const id = driveMatch[1];
+    finalSrc = `https://drive.google.com/uc?export=download&id=${id}`;
+  }
+
+  const wrap = document.createElement('div');
+  wrap.className = 'video-player';
+  wrap.innerHTML = `
+    <div class="video-container">
+      <button class="video-close" onclick="fecharVideo()">← Voltar</button>
+      <video src="${finalSrc}" controls autoplay playsinline>
+        Seu navegador não suporta vídeo HTML5.
+      </video>
+    </div>
+  `;
+  document.body.appendChild(wrap);
+}
+
 
     function fecharVideo(){
       const modal = document.querySelector('.video-player');
