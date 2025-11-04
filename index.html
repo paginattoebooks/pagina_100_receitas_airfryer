@@ -492,6 +492,13 @@
       height:auto;
       display:block;
     }
+    .video-container iframe{
+      width:100%;
+      height:min(70vh, 520px);
+      border:0;
+      display:block;
+     }
+
     .video-close{
       position:absolute;
       top:12px;
@@ -1099,30 +1106,45 @@
     }
 
     /* ======= Player de vídeo (modal com seta Voltar) ======= */
-
 function abrirVideo(src){
   if (!src) return;
 
-  // Se for link do Google Drive, converte para link de download direto
-  let finalSrc = src;
-  const driveMatch = src.match(/https?:\/\/drive\.google\.com\/file\/d\/([^/]+)/);
-  if (driveMatch) {
-    const id = driveMatch[1];
-    finalSrc = `https://drive.google.com/uc?export=download&id=${id}`;
-  }
-
   const wrap = document.createElement('div');
   wrap.className = 'video-player';
-  wrap.innerHTML = `
-    <div class="video-container">
-      <button class="video-close" onclick="fecharVideo()">← Voltar</button>
-      <video src="${finalSrc}" controls autoplay playsinline>
-        Seu navegador não suporta vídeo HTML5.
-      </video>
-    </div>
-  `;
+
+  // Detecta se é link do Google Drive
+  const driveMatch = src.match(/https?:\/\/drive\.google\.com\/file\/d\/([^/]+)/);
+
+  if (driveMatch) {
+    // Usa o player de preview do Drive
+    const id = driveMatch[1];
+    const embedSrc = `https://drive.google.com/file/d/${id}/preview`;
+
+    wrap.innerHTML = `
+      <div class="video-container">
+        <button class="video-close" onclick="fecharVideo()">← Voltar</button>
+        <iframe
+          src="${embedSrc}"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
+    `;
+  } else {
+    // Continua usando vídeo HTML5 normal para arquivos locais .mp4
+    wrap.innerHTML = `
+      <div class="video-container">
+        <button class="video-close" onclick="fecharVideo()">← Voltar</button>
+        <video src="${src}" controls autoplay playsinline>
+          Seu navegador não suporta vídeo HTML5.
+        </video>
+      </div>
+    `;
+  }
+
   document.body.appendChild(wrap);
 }
+
 
 
     function fecharVideo(){
