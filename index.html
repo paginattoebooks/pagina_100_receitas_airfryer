@@ -709,19 +709,22 @@
       font-size:16px;
       color:var(--gold-dark);
     }
-     /* ===== E-books em tela inteira no celular ===== */
-@media (max-width: 700px) {
-  .ebook-modal {
-    align-items: stretch;      /* deixa o container crescer na altura toda */
+     /* ===== Ajuste do modal de e-books no celular ===== */
+   @media (max-width: 700px) {
+   .ebook-modal {
+       align-items: stretch; /* ocupa a tela toda na altura */
   }
 
   .ebook-modal-container {
-    width: 100vw;              /* ocupa 100% da largura */
-    height: 100vh;             /* ocupa 100% da altura */
-    max-height: 100vh;
-    border-radius: 0;          /* tira as bordas arredondadas para colar na tela */
-    padding: 24px 18px 24px;   /* padding um pouco menor no mobile */
+    width: 100vw;
+    max-height: calc(100vh - 40px); /* deixa um respiro em cima/baixo */
+    margin: 20px 0;
+    padding: 24px 18px 24px;
+    border-radius: 0;
     box-sizing: border-box;
+
+    overflow-y: auto;                 /* HABILITA SCROLL DENTRO DO MODAL */
+    -webkit-overflow-scrolling: touch; /* scroll suave no iOS */
   }
 
   .ebook-grid {
