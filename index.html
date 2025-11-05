@@ -131,6 +131,39 @@
       transform:translateY(-3px);
       box-shadow:0 12px 26px rgba(0,0,0,.45);
     }
+    /* ===== Ajustes para mobile ===== */
+@media (max-width: 700px) {
+  header {
+    display: flex;
+    flex-direction: column; /* empilha logo e menu */
+    align-items: center;
+    gap: 6px;
+  }
+
+  header img {
+    width: 55px; /* reduz o tamanho da logo */
+    height: auto;
+  }
+
+  .logo-text {
+    text-align: center; /* centraliza o texto "Top Receitas do Chef" */
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px; /* espaçamento entre os links */
+    font-size: 1rem;
+  }
+
+  nav a {
+    display: inline-block;
+    text-align: center;
+  }
+}
+
 
     /* ===== TELA 2 – APP / ÁREA DE MEMBROS ===== */
     .hidden{ display:none !important; }
@@ -757,6 +790,7 @@
   </style>
 </head>
 <body class="lock">
+  
 
   <!-- ========= TELA 1: LANDING ========= -->
   <section id="landing">
