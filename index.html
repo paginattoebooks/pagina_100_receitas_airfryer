@@ -2,17 +2,6 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <script>
-    (function () {
-      // verifica se existe "sessão" salva
-      const user = localStorage.getItem('chef_user_email');
-
-      // se NÃO estiver logado, manda pro login
-      if (!user) {
-        window.location.href = '/login.html';
-      }
-    })();
-  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Top Receitas do Chef</title>
 
