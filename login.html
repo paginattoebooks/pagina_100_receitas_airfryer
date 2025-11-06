@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login – Top Receitas do Chef</title>
 
-  <!-- Fontes iguais ao site principal -->
+  <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
-  <!-- Supabase JS -->
+  <!-- Supabase JS v2 -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
   <style>
@@ -162,6 +162,7 @@
   <div class="login-card">
     <div class="login-logo">
       <div class="chef-icon">
+        <!-- Ajuste o nome do arquivo da logo, se for diferente -->
         <img src="Top receitas do chef.png" alt="Top Receitas do Chef">
       </div>
       <div class="logo-text">Top Receitas do Chef</div>
@@ -182,7 +183,9 @@
       <div class="form-group">
         <label for="cpf">CPF</label>
         <input type="text" id="cpf" required placeholder="000.000.000-00" />
-        <div class="hint">A senha que foi enviada no seu e-mail (apenas dígitos).</div>
+        <div class="hint">
+          Informe o CPF apenas para conferência. A senha de acesso é <strong>123456</strong>.
+        </div>
       </div>
 
       <button type="submit" class="btn-login" id="btnLogin">Entrar</button>
@@ -191,11 +194,14 @@
   </div>
 
   <script>
-    // === CONFIGURE SEU SUPABASE AQUI ===
-    const SUPABASE_URL = "https://mhqsnafcbuyclzkezvvy.supabase.co";
-    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1ocXNuYWZjYnV5Y2x6a2V6dnZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjIzNTU2MDEsImV4cCI6MjA3NzkzMTYwMX0.R73pP6GaxxP7Y3n_E7v1rl5JZgwhh3w_3osjCeIegMo";
+    // ================================
+    // CONFIG SUPABASE – PREENCHA AQUI
+    // ================================
+    const SUPABASE_URL = "SEU_SUPABASE_URL_AQUI"; // ex: https://xxxxx.supabase.co
+    const SUPABASE_ANON_KEY = "SUA_ANON_KEY_AQUI";
 
-    const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    // cria o client do Supabase
+    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
     const form = document.getElementById("loginForm");
     const msg  = document.getElementById("msg");
@@ -203,11 +209,13 @@
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
+
+      // limpa mensagens
       msg.textContent = "";
       msg.className = "msg";
 
-      let email = document.getElementById("email").value.trim();
-      let cpf   = document.getElementById("cpf").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const cpf   = document.getElementById("cpf").value.trim();
 
       if (!email || !cpf) {
         msg.textContent = "Preencha e-mail e CPF.";
@@ -215,7 +223,7 @@
         return;
       }
 
-      // pega só os dígitos do CPF e usa os 6 primeiros como senha
+      // validação básica do CPF (só quantidade de dígitos)
       const cpfDigits = cpf.replace(/\D/g, "");
       if (cpfDigits.length < 6) {
         msg.textContent = "CPF inválido. Use um CPF com pelo menos 6 números.";
@@ -223,8 +231,8 @@
         return;
       }
 
-      const senha = "123456"; // senha padrão
-
+      // senha padrão que o webhook usa para criar o usuário
+      const senha = "123456";
 
       btn.disabled = true;
       btn.textContent = "Entrando...";
@@ -232,29 +240,28 @@
       try {
         const { data, error } = await supabase.auth.signInWithPassword({
           email,
-          password: '123456',  // senha fixa para todos
+          password: senha,
         });
 
-
         if (error) {
-          console.error(error);
-          msg.textContent = "❌ E-mail ou senha incorretos.";
+          console.error("Erro de login Supabase:", error);
+          msg.textContent = "❌ E-mail ou senha incorretos, ou usuário não existe.";
           msg.classList.add("error");
         } else {
-          // Login OK
+          // login ok
           msg.textContent = "✅ Login realizado com sucesso!";
           msg.classList.add("success");
 
-          // Salva o e-mail como “sessão”
+          // salva o e-mail como "sessão" simples
           localStorage.setItem("chef_user_email", email.toLowerCase());
 
-          // Redireciona para a área de membros
+          // redireciona para a área de membros
           setTimeout(() => {
             window.location.href = "/index.html";
           }, 800);
         }
       } catch (err) {
-        console.error(err);
+        console.error("Erro inesperado no login:", err);
         msg.textContent = "Ocorreu um erro ao tentar entrar. Tente novamente.";
         msg.classList.add("error");
       } finally {
@@ -265,9 +272,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
