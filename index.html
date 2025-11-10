@@ -18,11 +18,11 @@
 
     :root{
       /* paleta premium */
-      --bg:#F9F7F4;
+      --bg:#bdccbb;
       --text:#2B2B2B;
       --muted:#8C8C8C;
-      --gold:#C8A96A;
-      --gold-dark:#B28E4E;
+      --gold:#f1ecec;
+      --gold-dark:#111111;
       --ink:#3F3F3F;
       --white:#fff;
       --black:#000;
@@ -171,7 +171,7 @@
     .header-fixed{
       position:fixed;
       inset:0 0 auto 0;
-      background:rgba(255,255,255,0.85);
+      background:rgba(240, 236, 236, 0.85);
       backdrop-filter:blur(8px);
       color:var(--text);
       padding:14px 20px;
@@ -341,7 +341,7 @@
       text-transform:uppercase;
     }
 
-    /* Locked (mantido se quiser usar no futuro) */
+    /* Locked */
     .categoria-card.locked{
       cursor:default;
       opacity:.8;
@@ -743,7 +743,7 @@
       justify-content: center;
       gap: 40px;
       padding: 50px 40px;
-      background: #F3EFEA;
+      background: #b4bbb3;
       border-radius: 20px;
       box-shadow: var(--shadow);
     }
@@ -843,7 +843,6 @@
       </div>
       <nav class="main-nav">
         <button class="nav-link" onclick="voltarInicio()">Início</button>
-        <button class="nav-link" onclick="abrirEbooksColecaoModal()">E-book</button>
         <button class="nav-link" onclick="irParaAulas()">Aulas</button>
       </nav>
     </header>
@@ -877,7 +876,7 @@
           <!-- Air Fryer -->
           <div class="categoria-card" onclick="abrirCategoria('Air Fryer',0)">
             <div class="categoria-img">
-              <img src="video air fryer/air fryer.jpg" alt="Air Fryer">
+              <img src="video air fryer\vxPvxYUJ9J7-4tECviPtc.jpg" alt="Air Fryer">
             </div>
             <h3>Air Fryer</h3>
             <p>Moderno e prático</p>
@@ -886,85 +885,85 @@
   
           <div class="categoria-card" onclick="abrirCategoria('Clássicos do Dia a Dia', 1)">
             <div class="categoria-img">
-              <img src="doces sem açucar/doces.jpg" alt="Doces sem Açúcar">
+              <img src="video air fryer\HDWXQ9R4ng9K5CS6tw1Au.jpg" alt="Doces sem Açúcar">
             </div>
-            <h3>Doces sem Açúcar</h3>
-            <p>Saudável e leve</p>
+            <h3>Clássicos do Dia a Dia</h3>
+            <p>Arroz, frango do almoço, legumes… tudo que resolve vida sem pensar muito.</p>
             <div class="receitas-count">10 receitas exclusivas</div>
           </div>
 
           <div class="categoria-card" onclick="abrirCategoria('Lanches Rápidos e Snacks', 2)">
             <div class="categoria-img">
-              <img src="paes de roscas/pao.jpg" alt="Pães e Roscas">
+              <img src="video air fryer\U0Sy2tNwV8JqgYcvgBo4b.jpg" alt="Pães e Roscas">
             </div>
-            <h3>Pães e Roscas</h3>
-            <p>Caseiro e artesanal</p>
+            <h3>Lanches Rápidos e Snacks</h3>
+            <p>Coxinha, pão de queijo, nuggets, enroladinho… aquele “vou fazer algo agora”.</p>
             <div class="receitas-count">10 receitas exclusivas</div>
           </div>
 
           <div class="categoria-card" onclick="abrirCategoria('Zero Óleo & Fit', 3)">
             <div class="categoria-img">
-              <img src="bolos/bolos.jpg" alt="Bolos">
+              <img src="video air fryer\GvGhrCVFQbCYz9pajjSz9.jpg" alt="Bolos">
             </div>
-            <h3>Bolos</h3>
-            <p>Gourmet e clássico</p>
+            <h3>Zero Óleo & Fit</h3>
+            <p>Receitas levinhas pra quem quer manter saúde sem virar chato da dieta.</p>
             <div class="receitas-count">10 receitas exclusivas</div>
           </div>
 
           <div class="categoria-card" onclick="abrirCategoria('Café da Manhã Turbo', 4)">
             <div class="categoria-img">
-             <img src="salgados/salgados.jpg" alt="Massas e Salgados">
+             <img src="video air fryer\E-56hVWEf_tRyqkuYivf2.jpg" alt="Massas e Salgados">
             </div>
-            <h3>Salgados</h3>
-            <p>Tradição e sabor</p>
+            <h3>Café da Manhã Turbo</h3>
+            <p>Ovos, pães, bolinhos, panquecas — tudo em 5–10min.</p>
             <div class="receitas-count">10 receitas exclusivas</div>
           </div>
 
           <div class="categoria-card" onclick="abrirCategoria('Jantar Prático', 5)">
             <div class="categoria-img">
-              <img src="molhos/molhos.jpg" alt="Molhos">
+              <img src="video air fryer\bDOYAfc-3oXSRwksjA_EQ.jpg" alt="Molhos">
             </div>
-            <h3>Molhos</h3>
+            <h3>Jantar Prático</h3>
             <p>Refinado e versátil</p>
             <div class="receitas-count">10 receitas exclusivas</div>
           </div>
 
           <div class="categoria-card" onclick="abrirCategoria('Crocantes Perfeitos', 6)">
             <div class="categoria-img">
-              <img src="sushi/sushi.jpg" alt="Sushi">
+              <img src="video air fryer\TBK2dt7HiFwSHmOKlBywT.jpg" alt="Sushi">
             </div>
-            <h3>Sushi</h3>
-            <p>Oriental e minimalista</p>
+            <h3>Crocantes Perfeitos</h3>
+            <p>Empanados, batatas, frango crispy… o momento da crocância suprema.</p>
             <div class="receitas-count">10 receitas exclusivas</div>
           </div>
 
           <!-- RECEITAS FIT -->
           <div class="categoria-card" onclick="abrirCategoria('Refeições para Duas Pessoas', 7)">
             <div class="categoria-img">
-              <img src="receitas fit/receitas fit.jpg" alt="Receitas Fit">
+              <img src="video air fryer\2Ebsw0ef3SHnHuJjqmfjr.jpg" alt="Receitas Fit">
             </div>
-            <h3>Receitas Fit</h3>
-            <p>Saudável e energética</p>
+            <h3>Refeições para Duas Pessoas</h3>
+            <p>Romântico? Não. É pra não desperdiçar comida mesmo.</p>
             <div class="receitas-count">10 receitas exclusivas</div>
           </div>
 
           <!-- TOP 10 NOITE DE JANTAR -->
           <div class="categoria-card" onclick="abrirCategoria('Doces sem Bagunça', 8)">
             <div class="categoria-img">
-              <img src="top 10 noite de jantar/jantar.jpg" alt="Top 10 Noite de Jantar">
+              <img src="video air fryer\dtwTV5BTl7l1ECl7JPsmA.jpg" alt="Top 10 Noite de Jantar">
             </div>
-            <h3>Top 10 Noite de Jantar</h3>
-            <p>Sofisticado e intimista</p>
+            <h3>Doces sem Bagunça</h3>
+            <p>Cookies, brownie, pudim, maçã assada — doce rápido e gostoso.</p>
             <div class="receitas-count">10 receitas exclusivas</div>
           </div>
 
           <!-- TOP 10 ALMOÇO DE DOMINGO -->
           <div class="categoria-card" onclick="abrirCategoria('Releituras da Panela', 9)">
             <div class="categoria-img">
-              <img src="top 10 almoço de domingo/almoço.jpg" alt="Top 10 Almoço de Domingo">
+              <img src="video air fryer\Y6VNIK-Qv3RhljvgSKEeH.jpg" alt="Top 10 Almoço de Domingo">
             </div>
-            <h3>Top 10 Almoço de Domingo</h3>
-            <p>Tradicional e acolhedor</p>
+            <h3>Releituras da Panela</h3>
+            <p>Versões adaptadas de pratos que normalmente precisam de fogão/forno.</p>
             <div class="receitas-count">10 receitas exclusivas</div>
           </div>
         </div>
@@ -1083,7 +1082,7 @@
         { nome:'Arroz do Sushi', descricao:'Base essencial da culinária japonesa, com textura e tempero perfeitos para moldar sushis e temakis.', imagem:'sushi/Arroz do Sushi.jpg', video:'https://drive.google.com/file/d/1owYkTM4BOHK14SxTF5foZDv3nWHYvotP/view?usp=drive_link', ebook:'sushi/2_1-Aprenda-a-Fazer-o-Shari-Arroz-do-Sushi.png' },
         { nome:'Cortar um Sashimi de Salmão', descricao:'Técnica profissional explicada passo a passo para obter cortes delicados e uniformes.', imagem:'sushi/Cortar um Sashimi de Salmão.jpg', video:'https://drive.google.com/file/d/1eZlu-aLfjLJQOjTNuvfeiMLSq_EWYQTy/view?usp=drive_link', ebook:'sushi/3_2-Como-Cortar-um-Sashimi-de-Salmao.png' },
         { nome:'Hot Roll Crispy', descricao:'Empanado crocante.', imagem:'sushi\\hot toll.jpg', video:'https://drive.google.com/file/d/1ePefgV5OJZ_s80cxQvS_R3UCt9noOuqF/view?usp=drive_link', ebook:'sushi/4_3-Hot-Roll-Filadelfia.png' },
-        { nome:'Missoshiro', descricao:'Sopa tradicional japonesa feita com missô, tofu e cebolinha, leve e reconfortante.', imagem:'sushi/Missoshiro.jpg', video:'https://drive.google.com/file/d/1Xd-YYwhTK4_THl9qx8JKt0fh5Fqhx1sR/view?usp=drive_link', ebook:'sushi/5_4-Missoshiro.png' },
+        { nome:'Missoshiro', descricao:'Sopa tradicional japonesa feita com missô, tofu e cebolinha, leve e reconfortante.', imagem:'sushi/Missoshiro.jpg', video:'https://drive.google.com/file/d/1Xd-YYwhTK4_THl9qxQJKt0fh5Fqhx1sR/view?usp=drive_link', ebook:'sushi/5_4-Missoshiro.png' },
         { nome:'Receita de Guioza', descricao:'Pastéis japoneses recheados e selados com crocância por fora e suculência por dentro.', imagem:'sushi/Receita de Guioza.jpg', video:'https://drive.google.com/file/d/1-iWtN4aJVQHz4hMJqRy7U0n9ZUYpP4qS/view?usp=drive_link', ebook:'sushi/6_5-Receita-de-Guioza.png' },
         { nome:'Hossomaki Tradicional', descricao:'Enrolado fino e elegante com arroz, alga nori e recheio clássico de peixe fresco.', imagem:'sushi/Hossomaki.jpg', video:'https://drive.google.com/file/d/1bgfVGZboaGRm3sdurK0AUjQHSr3hxr8a/view?usp=drive_link', ebook:'sushi/7_6-Sushi-Hossomaki-Tradicional.png' },
         { nome:'Temaki de Cream Cheese e Salmão', descricao:'Cone de alga crocante recheado com arroz e salmão fresco, finalizado com cream cheese.', imagem:'sushi/temaki.jpg', video:'https://drive.google.com/file/d/1OOb68ItIG0CReaax_diC_ZFA806_TIsE/view?usp=drive_link', ebook:'sushi/8_7-Temaki-de-Cream-Cheese-e-Salmao.png' },
@@ -1104,7 +1103,7 @@
         { nome:'Suco Verde', descricao:'Bebida detox e revitalizante, com combinação equilibrada de frutas e folhas.', imagem:'receitas fit/Suco Verde.jpg', video:'https://drive.google.com/file/d/1LJntVUvGthxXX_dw6O7UhR7my5h2NPAC/view?usp=drive_link', ebook:'receitas fit/11_10-Suco-Verde.png' }
       ],
       8: [
-        { nome:'Arroz com Lentilha', descricao:'Clássico simples e nutritivo, com sabor caseiro e textura soltinha perfeita.', imagem:'top 10 noite de jantar/Arroz com Lentilha.jpg', video:'https://drive.google.com/file/d/1DDNE3szM_szjKasdZTWJ9RhGGYxgOylf/view?usp=drive_link', ebook:'top 10 noite de jantar/1_1-Arroz-com-Lentilha.png' },
+        { nome:'Arroz com Lentilha', descricao:'Clássico simples e nutritivo, com sabor caseiro e textura soltinha perfeita.', imagem:'top 10 noite de jantar/Arroz com Lentilha.jpg', video:'https://drive.google.com/file/d/1DDNE3szM_szMKasdZTWJ9RhGGYxgOylf/view?usp=drive_link', ebook:'top 10 noite de jantar/1_1-Arroz-com-Lentilha.png' },
         { nome:'Bacalhau à Lagareiro', descricao:'Receita tradicional portuguesa, com bacalhau dourado, batatas e muito azeite.', imagem:'top 10 noite de jantar/Bacalhau à Lagareiro.jpg', video:'https://drive.google.com/file/d/1AuRBwvUqFzLsVIe2DSO8hK990l0OJ-rc/view?usp=drive_link', ebook:'top 10 noite de jantar/2_2-Bacalhau-a-Lagareiro.png' },
         { nome:'Caldo de Mandioca com Linguiça', descricao:'Cremoso, encorpado e cheio de sabor — ideal para dias frios ou jantares reconfortantes.', imagem:'top 10 noite de jantar/Caldo de Mandioca com Linguiça.jpg', video:'https://drive.google.com/file/d/1ahcsTD8nFTDIQ3ux5HQAokXM1TbEwVT4/view?usp=drive_link', ebook:'top 10 noite de jantar/3_3-Caldo-de-Mandioca-com-Linguica.png' },
         { nome:'Feijão Branco com Linguiça', descricao:'Combinação rústica e saborosa, com caldinho espesso e tempero caseiro irresistível.', imagem:'top 10 noite de jantar/Feijão Branco com Linguiça.jpeg', video:'https://drive.google.com/file/d/1ixIyNQ5RtkxOrJjaspqFbQXnSqezIWWq/view?usp=drive_link', ebook:'top 10 noite de jantar/4_4-Feijao-Branco-com-Linguica.png' },
@@ -1244,7 +1243,7 @@ function abrirVideo(src){
     }
   </script>
 
-  <!-- ========= SCRIPT EXTRA: navegação + biblioteca de e-books ========= -->
+  <!-- ========= SCRIPT EXTRA: navegação + biblioteca de e-books + BLOQUEIO ========= -->
   <script>
     const chefSection = document.getElementById('chef');
     const categoriasSectionEl = document.getElementById('categorias');
@@ -1252,8 +1251,19 @@ function abrirVideo(src){
     const receitasTituloEl = document.getElementById('receitasTitulo');
     const receitasGridEl = document.getElementById('receitasGrid');
 
+    // índices de categorias bloqueadas (1 a 9) e data de liberação
+    const lockedIndices = [1,2,3,4,5,6,7,8,9];
+    const releaseDate = new Date('2025-11-12T18:00:00');
+
     // sobrescreve abrirCategoria para esconder a Chef nas páginas de receita
+    // e bloquear categorias 1–9 até 12/11 às 18:00
     function abrirCategoria(titulo, index){
+      const agora = new Date();
+      if (lockedIndices.includes(index) && agora < releaseDate) {
+        alert('Essa categoria será liberada dia 12/11 às 18:00.');
+        return;
+      }
+
       const lista = receitasPorCategoria[index] || [];
       receitasTituloEl.textContent = titulo;
       receitasGridEl.innerHTML = '';
@@ -1288,68 +1298,6 @@ function abrirVideo(src){
       window.scrollTo({top:0,behavior:'smooth'});
     }
 
-    // Lista de coleções (quadradinhos). Troque "LINK_AQUI" pelos links reais de cada pasta do Drive.
-    const colecoesEbook = [
-      { titulo:'AIR FRYER DO CHEF BÁSICO', link:'https://drive.google.com/drive/folders/1CyCeGzMfrZQxghvMfTAvEEC5E3acdXr4?usp=drive_link' },
-      { titulo:'AIR FRYER DO CHEF PREMIUM', link:'https://drive.google.com/drive/folders/1zT55c8XwKg1IurR8K688dF6_qcygWsk2?usp=drive_link' },
-      { titulo:'AIR FRYER DO CHEF: 100 RECEITAS', link:'https://drive.google.com/drive/folders/1kbnDJpWIuA-UkQ93gYy6r3WzIBa9qL6M?usp=drive_link' },
-      { titulo:'AIR FRYER DO CHEF: AS TOP 10', link:'https://drive.google.com/drive/folders/1HyGZFdxXR6QCy0eXrzwpkjOL2-8Yc9KW?usp=drive_link' },
-      { titulo:'ATUALIZAÇÕES VITALÍCIAS', link:'https://drive.google.com/drive/folders/16zRQKVcEhV0dcvF6EePPzNMeH0MQobJk?usp=drive_link' },
-      { titulo:'DOCES SEM AÇUCAR', link:'https://drive.google.com/drive/folders/1S2w7biQv89Dj3c60gcq3b89rUnxSDKWH?usp=drive_link' },
-      { titulo:'Edição Gourmet – Air Fryer do Chef', link:'https://drive.google.com/drive/folders/1oFN81AvC4B-d_TjiyefiF2Tro5pbNzf0?usp=drive_link' },
-      { titulo:'RECHEIO SEM FOGO', link:'https://drive.google.com/drive/folders/1cQsdpI0JJx0nDjrC6b1kBbP1FVARwPhh?usp=drive_link' }
-    ];
-
-    function abrirLinkEbook(link){
-      if(!link || link === 'LINK_AQUI_1' || link.startsWith('LINK_AQUI')){
-        // placeholder: você ajusta depois os links reais.
-        alert('Configure o link dessa coleção no código.');
-        return;
-      }
-      window.open(link, '_blank');
-    }
-
-    // Modal com os quadradinhos de coleções
-    function abrirEbooksColecaoModal(){
-      // Se já existe, não cria outro
-      const existente = document.querySelector('.ebook-modal');
-      if (existente) return;
-
-      const wrap = document.createElement('div');
-      wrap.className = 'ebook-modal';
-
-      const cardsHTML = colecoesEbook.map(c => `
-        <button class="ebook-card" onclick="abrirLinkEbook('${c.link}')">
-          <div>
-            <div class="ebook-card-title">${c.titulo}</div>
-            <div class="ebook-card-tag">Coleção de e-books</div>
-          </div>
-          <div class="ebook-card-icon">📂</div>
-        </button>
-      `).join('');
-
-      wrap.innerHTML = `
-        <div class="ebook-modal-container">
-          <div class="ebook-modal-header">
-            <div>
-              <h3>Biblioteca de E-books</h3>
-              <p>Escolha uma coleção para acessar o conteúdo diretamente no seu Google Drive.</p>
-            </div>
-            <button class="ebook-close" onclick="fecharEbooksModal()">×</button>
-          </div>
-          <div class="ebook-grid">
-            ${cardsHTML}
-          </div>
-        </div>
-      `;
-      document.body.appendChild(wrap);
-    }
-
-    function fecharEbooksModal(){
-      const modal = document.querySelector('.ebook-modal');
-      if(modal) modal.remove();
-    }
-
     // nav: vai para "Aulas" (chef + categorias)
     function irParaAulas(){
       document.getElementById('landing').classList.add('hidden');
@@ -1357,6 +1305,29 @@ function abrirVideo(src){
       document.body.classList.remove('lock');
       voltarCategorias();
     }
+
+    // adiciona visualmente o "cadeado" e a mensagem nos cards bloqueados
+    document.addEventListener('DOMContentLoaded', function() {
+      const agora = new Date();
+      if (agora >= releaseDate) return; // depois da data, nada fica bloqueado
+
+      const cards = document.querySelectorAll('.categorias-grid .categoria-card');
+      cards.forEach(function(card) {
+        const onClick = card.getAttribute('onclick');
+        if (!onClick) return;
+        const match = onClick.match(/abrirCategoria\('[^']*',\s*(\d+)\)/);
+        if (!match) return;
+        const index = parseInt(match[1], 10);
+        if (!lockedIndices.includes(index)) return;
+
+        card.classList.add('locked');
+
+        const lockDiv = document.createElement('div');
+        lockDiv.className = 'categoria-lock';
+        lockDiv.innerHTML = '<span class="lock-icon">🔒</span><span>Essa categoria será liberada dia 12/11 às 18:00.</span>';
+        card.appendChild(lockDiv);
+      });
+    });
 
     // expõe funções no escopo global
     window.abrirCategoria = abrirCategoria;
@@ -1367,7 +1338,3 @@ function abrirVideo(src){
   </script>
 </body>
 </html>
-
-
-
-
