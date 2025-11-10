@@ -872,6 +872,12 @@
           Explore nosso repertório culinário cuidadosamente selecionado.
         </p>
 
+        <div class="categoria-card" onclick="window.open('https://drive.google.com/drive/folders/1_AD2KGY52qhCcHRJrz0lPtUMFhuAKW8u', '_blank')">
+            <h3>E-book Exclusivo</h3>
+            <p>Baixe agora e descubra segredos de grandes chefs!</p>
+            <span class="receitas-count">Clique para acessar</span>
+          </div>
+
         <div class="categorias-grid">
           <!-- Air Fryer -->
           <div class="categoria-card" onclick="abrirCategoria('Air Fryer',0)">
@@ -957,7 +963,7 @@
             <div class="receitas-count">10 receitas exclusivas</div>
           </div>
 
-          <!-- TOP 10 ALMOÇO DE DOMINGO -->
+          <!-- TOP 10 ALMOÇO DE DOMINGO -->F
           <div class="categoria-card" onclick="abrirCategoria('Releituras da Panela', 9)">
             <div class="categoria-img">
               <img src="video air fryer\Y6VNIK-Qv3RhljvgSKEeH.jpg" alt="Top 10 Almoço de Domingo">
@@ -965,6 +971,18 @@
             <h3>Releituras da Panela</h3>
             <p>Versões adaptadas de pratos que normalmente precisam de fogão/forno.</p>
             <div class="receitas-count">10 receitas exclusivas</div>
+          </div>
+        </div>
+      </section>
+
+        <!-- TOP 11 ALMOÇO DE DOMINGO -->
+          <div class="categoria-card" onclick="abrirCategoria('Releituras da Panela', 10)">
+            <div class="categoria-img">
+              <img src="video air fryer\7fe84df2-64ab-43fe-9015-7995f5615e10.jpeg" alt="Top 10 Almoço de Domingo">
+            </div>
+            <h3>Limpeza Extrema</h3>
+            <p>Aprenda a limpar sua airfryer da maneira certa.</p>
+            <div class="receitas-count">Clique aqui</div>
           </div>
         </div>
       </section>
@@ -1251,8 +1269,8 @@ function abrirVideo(src){
     const receitasTituloEl = document.getElementById('receitasTitulo');
     const receitasGridEl = document.getElementById('receitasGrid');
 
-    // índices de categorias bloqueadas (1 a 9) e data de liberação
-    const lockedIndices = [1,2,3,4,5,6,7,8,9];
+    // índices de categorias bloqueadas (1 a 10) e data de liberação
+    const lockedIndices = [1,2,3,4,5,6,7,8,9,10];
     const releaseDate = new Date('2025-11-12T18:00:00');
 
     // sobrescreve abrirCategoria para esconder a Chef nas páginas de receita
