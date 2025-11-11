@@ -1282,16 +1282,26 @@ function abrirVideo(src){
     const receitasGridEl = document.getElementById('receitasGrid');
 
     // índices de categorias bloqueadas (1 a 10) e data de liberação
-    const lockedIndices = [1,2,3,4,5,6,7,8,9,10];
-    const releaseDate = new Date('2025-11-12T18:00:00');
+    const lockedIndices = [2,3,4,5,6,7,8,9,10];
+    const releaseSchedule = {
+     2: new Date('2025-11-12T18:00:00'), // Lanches Rápidos e Snacks
+     3: new Date('2025-11-13T18:00:00'), // Zero Óleo & Fit
+     4: new Date('2025-11-14T18:00:00'),
+     5: new Date('2025-11-15T18:00:00'),
+     6: new Date('2025-11-16T18:00:00'),
+     7: new Date('2025-11-17T18:00:00'),
+     8: new Date('2025-11-18T18:00:00'),
+     9: new Date('2025-11-19T18:00:00'),
+    10: new Date('2025-11-20T18:00:00') // Limpeza Extrema também ganha data oficial
+   };
 
     // sobrescreve abrirCategoria para esconder a Chef nas páginas de receita
     // e bloquear categorias 1–9 até 12/11 às 18:00
     function abrirCategoria(titulo, index){
-      const agora = new Date();
-      if (lockedIndices.includes(index) && agora < releaseDate) {
-        alert('Essa categoria será liberada dia 12/11 às 18:00.');
-        return;
+      const unlockDate = releaseSchedule[index];
+      if (unlockDate && agora < unlockDate) {
+          alert(`Essa categoria será liberada em ${unlockDate.toLocaleDateString('pt-BR')} às ${unlockDate.toLocaleTimeString('pt-BR', {hour: '2-digit', minute:'2-digit'})}.`);
+          return;
       }
 
       const lista = receitasPorCategoria[index] || [];
@@ -1335,29 +1345,39 @@ function abrirVideo(src){
       document.body.classList.remove('lock');
       voltarCategorias();
     }
+   // adiciona visualmente o "cadeado" e datas diferentes em cada card bloqueado
+   document.addEventListener('DOMContentLoaded', function () {
+     const cards = document.querySelectorAll('.categorias-grid .categoria-card');
+     const agora = new Date();
 
-    // adiciona visualmente o "cadeado" e a mensagem nos cards bloqueados
-    document.addEventListener('DOMContentLoaded', function() {
-      const agora = new Date();
-      if (agora >= releaseDate) return; // depois da data, nada fica bloqueado
+     cards.forEach(function(card) {
+       const onClick = card.getAttribute('onclick');
+       if (!onClick) return;
 
-      const cards = document.querySelectorAll('.categorias-grid .categoria-card');
-      cards.forEach(function(card) {
-        const onClick = card.getAttribute('onclick');
-        if (!onClick) return;
-        const match = onClick.match(/abrirCategoria\('[^']*',\s*(\d+)\)/);
-        if (!match) return;
-        const index = parseInt(match[1], 10);
-        if (!lockedIndices.includes(index)) return;
+       const match = onClick.match(/abrirCategoria\('[^']*',\s*(\d+)\)/);
+       if (!match) return;
 
-        card.classList.add('locked');
+       const index = parseInt(match[1], 10);
+       const unlockDate = releaseSchedule[index];
 
-        const lockDiv = document.createElement('div');
-        lockDiv.className = 'categoria-lock';
-        lockDiv.innerHTML = '<span class="lock-icon">🔒</span><span>Essa categoria será liberada dia 12/11 às 18:00.</span>';
-        card.appendChild(lockDiv);
-      });
-    });
+    // se não estiver na lista de bloqueados ou não tiver data → deixa livre
+    if (!lockedIndices.includes(index) || !unlockDate) return;
+
+    // Se ainda não chegou a data → bloqueia visualmente
+    if (agora < unlockDate) {
+      card.classList.add('locked');
+
+      const lockDiv = document.createElement('div');
+      lockDiv.className = 'categoria-lock';
+      lockDiv.innerHTML = `
+        <span class="lock-icon">🔒</span>
+        <span>Será liberada dia ${unlockDate.toLocaleDateString('pt-BR')} às ${unlockDate.toLocaleTimeString('pt-BR', {hour:'2-digit',minute:'2-digit'})}</span>
+      `;
+      card.appendChild(lockDiv);
+    }
+  });
+});
+
 
     // expõe funções no escopo global
     window.abrirCategoria = abrirCategoria;
