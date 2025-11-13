@@ -19,6 +19,9 @@
     :root{
       /* paleta premium */
       --bg:#bdccbb;
+      --background-image: 
+        linear-gradient(rgba(241, 241, 241, 0.45), rgba(173, 165, 170, 0.45)), 
+        url('Fundo.png');
       --text:#2B2B2B;
       --muted:#8C8C8C;
       --gold:#f1ecec;
@@ -30,13 +33,15 @@
       --shadow:0 4px 12px rgba(0,0,0,0.08);
     }
 
-    body{
-      font-family:'Lato',sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      overflow-x:hidden;
-      line-height:1.7;
+    body {
+      font-family: 'Lato', sans-serif;
+      background-image: var(--background-image);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
     }
+
     body.lock{
       height:100vh;
       overflow:hidden;
@@ -1050,28 +1055,29 @@
         { nome:'Lasanha a Bolonhesa', descricao:'Você Tem Que Experimentar Isso!', imagem:'classicos dia a dia/Lasanha à Bolonhesa Express.png', video:'https://drive.google.com/file/d/1-OOGjsVPnORgRLxftHZjZGwrXi5oxfJu/view?usp=drive_link', ebook:'classicos dia a dia/11_Lasanha-a-Bolonhesa-Express.png' }
       ],
       2: [
-        { nome:'Bolacha de Amendoim', descricao:'Crocrante por fora e macia por dentro, com o sabor marcante do amendoim torrado.', imagem:'paes de roscas/Bolacha de Amendoim.jpeg', video:'https://drive.google.com/file/d/1O3cRFybL6OY6CXFIvFdo3Q3lKniZryYT/view?usp=drive_link', ebook:'paes de roscas/2_1-Bolacha-de-Amendoim.png' },
-        { nome:'Incrível Pão de Água', descricao:'Massa leve, casquinha dourada e textura perfeita, igual aos pães de padaria artesanal.', imagem:'paes de roscas/Incrível Pão de Água.jpeg', video:'https://drive.google.com/file/d/1Gy_pkpsk2ztPS2izthfhCDOodG-cOXaH/view?usp=drive_link', ebook:'paes de roscas/3_2-Incrivel-Pao-de-Agua.png' },
-        { nome:'Pão Caseiro na Air Fryer', descricao:'Fácil de fazer, fofinho e pronto em minutos — ideal para o café da manhã.', imagem:'paes de roscas/Pão Caseiro na Air Fryer.jpeg', video:'https://drive.google.com/file/d/1AXzn67TNT8_99sarTc-7mZPvcpvpeW5s/view?usp=drive_link', ebook:'paes de roscas/4_3-Pao-Caseiro-na-Air-Fryer.png' },
-        { nome:'Pão de Frigideira com Amido de Milho', descricao:'Rápido, sem forno e com textura macia, perfeito para um lanche prático.', imagem:'paes de roscas/Pão de Frigideira com Amido de Milho.jpeg', video:'https://drive.google.com/file/d/1vo4WRufaFcsvD0tuZgdEdoRb9G7oDibm/view?usp=drive_link', ebook:'paes de roscas/5_4-Pao-de-Frigideira-com-Amido-de-Milho.png' },
-        { nome:'Pão Rápido', descricao:' Preparado em poucos minutos, com poucos ingredientes e sabor de pão fresco.', imagem:'paes de roscas/Pão Rápido.jpeg', video:'https://drive.google.com/file/d/1_c8oCXDOksLixP_BrAyVqjj3LEJISxxS/view?usp=drive_link', ebook:'paes de roscas/6_5-Pao-Rapido.png' },
-        { nome:'Pão Rápido de Aveia', descricao:'Versão nutritiva e leve, feita sem farinha branca e pronta em instantes.', imagem:'paes de roscas/Pão Rápido de Aveia.jpeg', video:'https://drive.google.com/file/d/1DvTnsRf8Dhi7fyyO2nErXdiVshqk2ANd/view?usp=drive_link', ebook:'paes de roscas/7_6-Pao-Rapido-de-Aveia.png' },
-        { nome:'Rosca Caseira', descricao:'Tradicional, fofa e com aquele aroma irresistível que lembra pão de vó.', imagem:'paes de roscas/Rosca Caseira.jpeg', video:'https://drive.google.com/file/d/14YZRBuvC_ErA6RrxB23REA3i3czSqhv9/view?usp=drive_link', ebook:'paes de roscas/8_7-Rosca-Caseira.png' },
-        { nome:'Rosca de Coco Deliciosa', descricao:'Recheada com coco fresco e calda suave, perfeita para acompanhar o café.', imagem:'paes de roscas/Rosca de Coco Deliciosa.jpeg', video:'https://drive.google.com/file/d/10rFjJBYXvmxKQpXKFfOqoXkCF3p6A8m6/view?usp=drive_link', ebook:'paes de roscas/9_8-Rosca-de-Coco-Deliciosa.png' },
-        { nome:'Rosca Manteiguinha', descricao:'Sabor amanteigado e textura leve que derrete na boca.', imagem:'paes de roscas/Rosca Manteiguinha.jpeg', video:'https://drive.google.com/file/d/16XHJQfB9QjMNm3P5eTxOXvu2jrbv_YIH/view?usp=drive_link', ebook:'paes de roscas/10_9-Rosca-Manteiguinha.png' },
-        { nome:'Rosquinha de Nata', descricao:'Aromática, macia e com sabor suave de nata — simples e irresistível', imagem:'paes de roscas/Rosquinha de Nata.jpeg', video:'https://drive.google.com/file/d/1x1hIAZGJm53ChmrQtLnralbvA6KOhVkw/view?usp=drive_link', ebook:'paes de roscas/11_10-Rosquinha-de-Nata.png' }
+        { nome:'Pão Com Ovo Gourmet ', descricao:'Aproveitem e experimentem esta deliciosa e simples receita de café da manhã na Air Fryer!', imagem:'paes de roscas/Pão com Ovo Gourmet.jpg', video:'https://drive.google.com/file/d/1AMtL7AQ0gTQUhKFd2sTEqzm0wAzLSja7/view?usp=drive_link', ebook:'paes de roscas/1_Pao-com-Ovo-Gourmet.png' },
+        { nome:'Misto Quente À Moda Espanhola', descricao:'Crocante, suculento e pronto em minutos! ', imagem:'paes de roscas/Misto Quente à Moda Espanhola.jpg', video:'https://drive.google.com/file/d/1uJmSbaDhFu-SnoMKxyVQEKCZzm7s5FfS/view?usp=drive_link', ebook:'paes de roscas/2_Misto-Quente-a-Moda-Espanhola.png' },
+        { nome:'Anéis De Abobrinha A Milanesa', descricao:'Divirta-se reproduzindo esta deliciosa receita de abobrinha na Air Fryer!', imagem:'paes de roscas/Captura de tela 2025-11-13 162158.png', video:'https://drive.google.com/file/d/13l722_kMla0slA4dCYjfGvySTr6BoHC9/view?usp=drive_link', ebook:'paes de roscas/3_Aneis-de-Abobrinha-a-Milanesa.png' },
+        { nome:'Sanduíche De Atum Com Tortilhas (Rap 10)', descricao:'Outra Receita Fácil Que Todo Mundo Está Fazendo Agora!', imagem:'paes de roscas/Sanduíche de Atum com Tortilhas.jpg', video:'https://drive.google.com/file/d/1fKcxx5ZH0IPBjZcUUnrc-i63jyleA1Rt/view?usp=drive_link', ebook:'paes de roscas/4_Sanduiche-de-Atum-com-Tortilhas.png' },
+        { nome:'Hambúrguer De Carne Bovina Com Vegetais', descricao:'Crocante, suculento e pronto em minutos! ', imagem:'paes de roscas/Hambúrguer de Carne com Vegetais.jpg', video:'https://drive.google.com/file/d/1-CEPOTkHt92PUC7E_Adkern4aWFD8BGZ/view?usp=drive_link', ebook:'paes de roscas/5_Ingredientes-do-Hamburguer.png' },
+        { nome:'Bolinho De Carne Com Queijo ', descricao:'Uma deliciosa receita de jantar na Air Fryer ', imagem:'paes de roscas/Bolinho de Carne com Queijo.jpg', video:'https://drive.google.com/file/d/1usRYfMpWwNWTmQVj7ZPEZL6KXYz3bZET/view?usp=drive_link', ebook:'paes de roscas/6_Bolinho-de-Carne-com-Queijo.png' },
+        { nome:'Rocambole De Carne Moída Suculento', descricao:'Esta receita de Rocambole de carne na air fryer ', imagem:'paes de roscas/Rocambole de Carne Moída Suculento.jpg', video:'https://drive.google.com/file/d/1_xNsgQZCb1MVznJalwqXV_k2_95bbVW-/view?usp=drive_link', ebook:'paes de roscas/7_Rocambole-de-Carne-Moida-Suculento.png' },
+        { nome:'Batatas Rápidas e Fáceis na Air Fryer', descricao:'Esta receita de batata na Air Fryer se tornou viral – pronta em minutos!', imagem:'paes de roscas/Batatas Rápidas e Fáceis na Air Fryer.jpg', video:'https://drive.google.com/file/d/1JtEY_5xuDaTQLF5XYQkIcCcoiVMCMdMi/view?usp=drive_link', ebook:'paes de roscas/8_Batatas-Rapidas-e-Faceis-na-Air-Fryer.png' },
+        { nome:'Misto Quente Crocante', descricao:'Crocante, suculento e pronto em minutos! ', imagem:'paes de roscas/Misto Quente Crocante.png', video:'https://drive.google.com/file/d/1f_Eo9v0U3ZAgbvy-yCIadhkb1h3FuFgu/view?usp=drive_link', ebook:'paes de roscas/9_Misto-Quente-Crocante.png' },
+        { nome:'Ciabatta na Air Fryer ', descricao:'Outra Receita Fácil Que Todo Mundo Está Fazendo Agora!', imagem:'paes de roscas/Ciabatta na Air Fryer.jpg', video:'https://drive.google.com/file/d/1skzvOfxPrm6fluiC85eA154CZ-QCu5a7/view?usp=drive_link', ebook:'paes de roscas/10_Ciabatta-na-Air-Fryer.png' }
+       
       ],
       3: [
-        { nome:'Bolo Amanteigado de Morango', descricao:'Massa leve, sabor delicado e pedaços de morango que deixam cada fatia irresistível.', imagem:'bolos/Bolo Amanteigado de Morango.jpeg', video:'https://drive.google.com/file/d/1A0BpvsTsVqCjxZMKjBiIE77c7zHceoOp/view?usp=drive_link', ebook:'bolos/2_1-Bolo-Amanteigado-de-Morango.png' },
-        { nome:'Bolo de Amendoim com Chocolate', descricao:'Combinação perfeita entre o sabor intenso do amendoim e a cremosidade do chocolate.', imagem:'bolos/Bolo de Amendoim com Chocolate.jpeg', video:'https://drive.google.com/file/d/1is0O5Y9PRZfv-ieY2HCO9xyysxm7CWVV/view?usp=drive_link', ebook:'bolos/3_2-Bolo-de-Amendoim-com-Chocolate.png' },
-        { nome:'Bolo de Cenoura com Chocolate', descricao:'Clássico caseiro com textura macia e cobertura de chocolate brilhante e encorpado', imagem:'bolos/Bolo de Cenoura com Chocolate.jpeg', video:'https://drive.google.com/file/d/1PsmXrPv7Uwi2qlk2KA3--zMVXS4RuDY1/view?usp=drive_link', ebook:'bolos/4_3-Bolo-de-Cenoura-com-Chocolate.png' },
-        { nome:'Bolo de Chocolate Maravilhoso', descricao:' Rico em sabor, úmido e com o equilíbrio ideal entre doçura e intensidade.', imagem:'bolos/Bolo de Chocolate Maravilhoso.jpeg', video:'https://drive.google.com/file/d/1pXqfr1HVILItjMyb7iet2L_-zDws5eMM/view?usp=drive_link', ebook:'bolos/5_4-Bolo-de-Chocolate-Maravilhoso.png' },
-        { nome:'Bolo de Limão Siciliano', descricao:' Refrescante, leve e com aquele toque azedinho que combina com qualquer hora do dia.', imagem:'bolos/Bolo de Limão Fofinho.jpeg', video:'https://drive.google.com/file/d/1VRQOjHT-ypl_7Hq5jGGE6G0Yo6pGfgOS/view?usp=drive_link', ebook:'bolos/7_6-Bolo-de-Limao-Fofinho.png' },
-        { nome:'Bolo de Laranja Fofinho', descricao:'Feito com suco natural, aroma cítrico e uma maciez que derrete na boca.', imagem:'bolos/Bolo de Laranja Fofinho.jpeg', video:'https://drive.google.com/file/d/1BOEjb14xQ2zkbjwbgnQjPG9uloriG3D9/view?usp=drive_link', ebook:'bolos/6_5-Bolo-de-Laranja-Fofinho.png' },
-        { nome:'Bolo de Milho', descricao:'Sabor tradicional, textura cremosa e o perfume inconfundível do milho fresco.', imagem:'bolos/Bolo de Milho.jpeg', video:'https://drive.google.com/file/d/1WnB8XMTz1kcRas-ZSiSqJoZRXPxiyvxc/view?usp=drive_link', ebook:'bolos/8_7-Bolo-de-Milho.png' },
-        { nome:'Bolo de Paçoca', descricao:'Explosão de sabor e nostalgia com a doçura única da paçoca em cada mordida.', imagem:'bolos/Bolo de Paçoca.jpeg', video:'https://drive.google.com/file/d/1QPa_j92eXwd_I7_yMYSeH0YyScGA55HX/view?usp=drive_link', ebook:'bolos/9_8-Bolo-de-Pacoca.png' },
-        { nome:'Bolo de Reis Delicioso', descricao:'Inspirado na receita clássica europeia, com frutas cristalizadas e aroma marcante.', imagem:'bolos/Bolo de Reis Delicioso.jpeg', video:'https://drive.google.com/file/d/1qDcKLXx_jth7fvFSjYWwbFDh0q6uatBK/view?usp=drive_link', ebook:'bolos/10_9-Bolo-de-Reis-Delicioso.png' },
-        { nome:'Cuca de Uva', descricao:'Cobertura crocante, recheio suculento e o contraste perfeito entre massa e frutas.', imagem:'bolos/Cuca de Uva.jpeg', video:'https://drive.google.com/file/d/158qA_703cHRCZCHCQGADLGCJzE1fUrH9/view?usp=drive_link', ebook:'bolos/10-Cuca-de-Uva.png' }
+        { nome:'Frango Com Brócolis', descricao:'Muito Saboroso!', imagem:'bolos/Frango com Aspargos na Air Fryer.jpg', video:'https://drive.google.com/file/d/1C0mh1MWYMmh3gA0qAqN3GKZ33Cd1iHRZ/view?usp=drive_link', ebook:'bolos/1_RECEITA-1-Frango-com-Brocolos.png' },
+        { nome:'Legumes Assados Na Airfryer', descricao:'Muito Saboroso!', imagem:'bolos/legumes-na-airfryer.jpg', video:'https://drive.google.com/file/d/1kBnmy3SfDPJlPCKre4MfddigFdMYbUW4/view?usp=drive_link', ebook:'bolos/2_RECEITA-2-Legumes-Assados-na-Airfryer.png' },
+        { nome:'Frango Com Aspargos Na Air Fryer', descricao:'Rápido E Fácil De Fazer!', imagem:'bolos/Frango com Aspargos na Air Fryer.jpg', video:'https://drive.google.com/file/d/1C0mh1MWYMmh3gA0qAqN3GKZ33Cd1iHRZ/view?usp=drive_link', ebook:'bolos/3_RECEITA-3-Frango-com-Aspargos-na-Air-Fryer.png' },
+        { nome:'Omelete Simples Na Airfryer ', descricao:'Rápido E Fácil De Fazer!', imagem:'bolos/OMELETE SIMPLES NA AIR FRYER.jpg', video:'https://drive.google.com/file/d/1OmTGQTtHQWm3YCEhC3ERu0FMQI2uDrGa/view?usp=drive_link', ebook:'bolos/4_RECEITA-4-Omelete-Simples-na-Airfryer.png' },
+        { nome:'Coxinha De Frango Fit Na Airfryer ', descricao:'Sem Massa E Com Requeijão', imagem:'bolos/Coxinha-de-frango-fit.webp', video:'https://drive.google.com/file/d/1HGDoZEo7XDVlDb-gSLmXQXdnC4OK4j0A/view?usp=drive_link', ebook:'bolos/5_RECEITA-5-Coxinha-de-Frango-FIT-na-Airfryer.png' },
+        { nome:'Segredo Do Bife De Couve-Flor', descricao:'O melhor!', imagem:'bolos/BIFE DE COUVE FLOR.jpg', video:'https://drive.google.com/file/d/1eYY_UbsMzeBR9PA6qKI2QUDyrkRcqevy/view?usp=drive_link', ebook:'bolos/6_RECEITA-6-Segredo-do-Bife-de-Couve-flor.png' },
+        { nome:'Torta De Repolho', descricao:'Minha Versão Rápida E Aconchegante Da Noite Da Pizza ', imagem:'bolos/Torta de Repolho Que Derrete Como Manteiga.jpg', video:'https://drive.google.com/file/d/1n09IcM1XY9lylmwqQIpDBAGhxhJjU571/view?usp=drive_link', ebook:'bolos/7_RECEITA-7-Torta-de-Repolho-Que-Derrete-Como-Manteiga.png' },
+        { nome:'Tomate Recheado E Assado', descricao:'Suculentos, Dourados E Suavemente Perfumados', imagem:'bolos/TOMATES ASSADOE E RECHEADOS.jpg', video:'https://drive.google.com/file/d/1fMHJ6cSUB3NXxzm5ZJChBGKqX7Exfatj/view?usp=drive_link', ebook:'bolos/8_RECEITA-8-Tomate-Recheado-e-Assado.png' },
+        { nome:'Casserole De Ovos E Legumes', descricao:'Tomates Suculentos, Manjericão Fresco, Pimentões Doces E Mozzarella Derretida ', imagem:'bolos/CASSEROLE DE OVOS COM LEGUMES.jpg', video:'https://drive.google.com/file/d/1w9pndDd-rQ6u37_USmleAF75ulPAcCtv/view?usp=drive_link', ebook:'bolos/9_RECEITA-9-Casserole-de-Ovos-e-Legumes.png' },
+        { nome:'Beringelas Recheadas E Assadas', descricao:'Douradas, Macias E Cheias De Calor — Essas Berinjelas Recheada!', imagem:'bolos/BERINGELA ASSADA E RECHEADA.jpg', video:'https://drive.google.com/file/d/1UJqFTq1HJ2vtx7at-xvdfPk2KpWrWWz8/view?usp=drive_link', ebook:'bolos/10_RECEITA-10-Berinjelas-Recheadas-e-Assadas.png' }
       ],
       4: [
         { nome:'Coxinha Recheada', descricao:'Crosta crocante, recheio cremoso e sabor irresistível em cada mordida.', imagem:'salgados/Coxinha Recheada.jpg', video:'https://drive.google.com/file/d/1AY9YB4kx6DfPiZ7eBPDKwjnugZ8ENg7H/view?usp=drive_link', ebook:'salgados/2_1-Coxinha-Recheada.png' },
@@ -1282,10 +1288,8 @@ function abrirVideo(src){
     const receitasGridEl = document.getElementById('receitasGrid');
 
     // índices de categorias bloqueadas (1 a 10) e data de liberação
-    const lockedIndices = [2,3,4,5,6,7,8,9,10];
+    const lockedIndices = [4,5,6,7,8,9,10];
     const releaseSchedule = {
-     2: new Date('2025-11-12T18:00:00'), // Lanches Rápidos e Snacks
-     3: new Date('2025-11-13T18:00:00'), // Zero Óleo & Fit
      4: new Date('2025-11-14T18:00:00'),
      5: new Date('2025-11-15T18:00:00'),
      6: new Date('2025-11-16T18:00:00'),
@@ -1386,5 +1390,7 @@ function abrirVideo(src){
     window.irParaAulas = irParaAulas;
     window.abrirLinkEbook = abrirLinkEbook;
   </script>
+</body>
+</html>
 </body>
 </html>
