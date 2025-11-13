@@ -740,81 +740,76 @@
 
 
 
-    /* ===== Apresentação da Chef ===== */
+    /* ===== Seção Chef Apresentação ajustada ===== */
     .chef-apresentacao {
       max-width: 1000px;
-      margin: 120px auto 80px;
+      margin: 60px auto 30px;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      gap: 40px;
-      padding: 50px 40px;
-      background: #b4bbb3;
+      gap: 20px;
+      padding: 20px 20px;
+      background:
+        linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+        url('banner.png'); /* substitua com caminho correto */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       border-radius: 20px;
       box-shadow: var(--shadow);
     }
 
+    .chef-img-container {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+    }
+
     .chef-img {
-      width: 350px;
+      max-width: 100%;
       height: auto;
       border-radius: 24px;
       box-shadow: 0 12px 18px rgba(0,0,0,0.18);
-      object-fit:cover;
     }
 
-    .chef-texto {
-      max-width: 650px;
+    .chef-conteudo {
+      flex: 1 1 300px;
+      text-align: center;
     }
 
-    .chef-texto h2 {
+    .chef-conteudo h2 {
       font-family: 'Playfair Display', serif;
       font-size: 32px;
-      color: #252121;
-      margin-bottom: 14px;
-      letter-spacing:0.5px;
+      color: var(--black);
+      margin-bottom: 20px;
     }
 
-    .chef-texto p {
-      font-size: 17px;
-      color: #000000;
-      line-height: 1.7;
+    .botao-garantir {
+      display: inline-block;
+      padding: 14px 32px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #fff;
+      background-color: #39e642;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
-    /* Responsivo chef & categorias */
+    .botao-garantir:hover {
+      background-color: #d62828;
+      transform: translateY(-2px);
+    }
+
     @media (max-width: 768px) {
       .chef-apresentacao {
         flex-direction: column;
+        gap: 20px;
+      }
+      .chef-conteudo {
         text-align: center;
-        padding:32px 22px 36px;
-        margin-top:100px;
-      }
-      .chef-img {
-        width: 220px;
-      }
-      .chef-texto h2 {
-        font-size: 26px;
-      }
-      .categorias-section{
-        padding-top:90px;
-      }
-      .categoria-card:first-child {
-        background: linear-gradient(135deg, #fff3e0 0%, #ffd180 100%);
-        border: 2px solid #ffb300;
-      }
-    }
-
-    @keyframes fadeIn{
-      from{ opacity:0; }
-      to{ opacity:1; }
-    }
-    @keyframes fadeUp{
-      from{
-        opacity:0;
-        transform:translateY(10px);
-      }
-      to{
-        opacity:1;
-        transform:translateY(0);
       }
     }
   </style>
@@ -853,21 +848,14 @@
       </nav>
     </header>
 
-    <section class="chef-apresentacao" id="chef">
-      <div class="chef-container">
-        <img src="Generated Image November 03, 2025 - 3_21PM (1).png" alt="Chef Ana Russo" class="chef-img">
-        <div class="chef-texto">
-          <h2>Chef Ana Russo</h2>
-          <p>
-            <strong>Chef Ana Russo</strong> é uma apaixonada pela arte da gastronomia, 
-            formada por renomadas escolas internacionais e com anos de experiência 
-            em cozinhas ao redor do mundo. Após aperfeiçoar suas técnicas fora do país, 
-            Ana decidiu reunir todo o seu conhecimento em um curso exclusivo com 
-            <strong>100 receitas incríveis</strong>, criadas e testadas com muito carinho. 
-            Cada prato foi pensado para inspirar, ensinar e despertar o prazer de cozinhar — 
-            do simples ao sofisticado, com o toque especial da Chef.
-          </p>
-        </div>
+    <section class="chef-apresentacao">
+      <div class="chef-img-container">
+        <img class="chef-img" src="yolab.png" alt="Chef Ana Russo"> <!-- substitua caminho se diferente -->
+      </div>
+
+        <a href="https://fabricadeiogurte.somasoundsolutions.shop/" class="botao-garantir" target="_blank" rel="noopener">
+          ✅ Saiba Mais
+        </a>
       </div>
     </section>
 
@@ -1390,7 +1378,5 @@ function abrirVideo(src){
     window.irParaAulas = irParaAulas;
     window.abrirLinkEbook = abrirLinkEbook;
   </script>
-</body>
-</html>
 </body>
 </html>
